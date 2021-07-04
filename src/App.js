@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
+import NavBar from './components/Navbar/Navbar';
+import Button  from '@material-ui/core/Button';
 
 function App() {
+  const darBienvenida =()=> alert ("Bienvenido a nuestra tienda");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          BROCOLI 3D
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <NavBar
+          nombreDeLaTienda="Brocoli3d"
+          darBienvenida= {darBienvenida} 
+        />
+        <h1>HOLA BROCOLI</h1>
+      </div>
+    </>  
   );
 }
 
